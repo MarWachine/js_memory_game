@@ -1,0 +1,344 @@
+@keyframes squeeze {
+    from { transform: rotateX(0deg); }
+    to { transform: rotateX(90deg); }
+}
+
+@keyframes extend {
+    from { transform: rotateX(90deg); }
+    to { transform: rotateX(0deg); }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes setcard {
+    from { transform: rotateZ(-10deg); }
+    to { transform: rotateZ(0deg); }
+}
+
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 15, 20);
+    background: rgb(0, 15, 20);
+}
+
+#header {
+    width: 100%;
+    margin: 15px auto;
+    height: 70px;
+/*  background-color: rgb(226, 218, 192); */
+}
+
+    #headline {
+        position: relative;
+        float: left;
+        width: 15%;
+        height: 50px;
+        padding-top: 5px;
+        margin-bottom: -5px;
+    }
+
+        h1 {
+            position: relative;
+            margin: 15px auto 0 auto;
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            color: rgb(248, 243, 233);
+        }   
+
+    #countdown {
+        position: relative;
+        float: left;
+        width: 70%;
+        height:50px;
+    }
+
+    #headscore {
+        position: relative;
+        float: left;
+        width: 15%;
+        height: 50px;
+        padding-top: 10px;
+        margin-bottom: -10px;
+    }
+        
+        h3 {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            color: rgb(248, 243, 233);
+        }
+
+#main {
+    width: 100%;
+    margin: 0 auto;
+    height: 700px;
+    background-color: #ddd;
+}
+
+    #options {
+        position: relative;
+        float: left;
+        width: 15%;
+        height: 660px;
+        padding-top: 40px;
+        background-color: rgb(248, 243, 233);
+    }
+
+        #options p {
+            text-align: center;
+            margin: 0;
+        }
+
+        input {
+            position: relative;
+            width: 50%;
+            margin: 0 auto 25px 25%;
+        }
+
+        #selectpairs {
+            position: relative;
+            width: 20%;
+            margin: 0 auto 40px 40%;
+        }
+
+            /*
+            .pairchoice {}
+            */
+
+        .deck {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 5px auto;
+            padding: 0;
+            border-radius: 10px;
+            background-size: 100%;
+            border: 1px solid transparent;
+            opacity: 0.6;
+        }
+
+        .deck:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .deck p {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding-left: -10px;
+            color: #fff;
+            font-size: 14px;
+            background: #000;
+            opacity: 0.6;
+            border-radius: 10px;
+        }
+
+        .chosendeck {
+            border: 1px solid #789;
+            opacity: 1;
+        }
+
+        .chosendeck:hover {
+            cursor: default;
+            opacity: 1;
+        }
+
+    #content {
+        position: relative;
+        float: left;
+        width: 70%;
+        height:700px;
+   /*   background-color: #333; */
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: none;
+    }
+
+    #highscore {
+        position: relative;
+        float: left;
+        width: 15%;
+        height: 700px;
+        background-color: rgb(248, 243, 233);
+        text-align: center;
+        color:rgb(0, 15, 20);
+    }
+
+        #paare, #zuege, #message, #actions {
+            text-align: center;
+            color:rgb(0, 15, 20);
+        }
+
+        #message {
+            padding-top: 220px;
+            margin-bottom: -10px;
+        }
+
+        #actions {
+            padding-top: 40px;
+            margin-bottom: -10px;
+        }
+
+        table {
+            position: relative;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+            th {
+                width: 150px;
+                height: 150px;
+                border: 1px transparent;
+                border-radius: 10px;
+                background-size: 100%;
+                animation-name: fadein;
+                animation-duration: 400ms;
+            }
+
+                .visible {
+                    border: 1px solid #789;
+                    opacity: 1;
+                }
+                
+                .invisible {
+                    border: 1px transparent;
+                    opacity: 0;
+                }
+
+                .fade {
+                    animation-name:fadein;
+                    animation-duration: 2s;
+                }
+
+                .squeezed {
+                    animation-name: squeeze;
+                    animation-duration: 200ms;
+                }
+
+                .extended {
+                    animation-name: extend;
+                    animation-duration: 200ms;
+                }
+
+                .faceup {
+                    cursor: default;
+                    opacity: 1;
+                }
+                
+                .facedown:hover {
+                    cursor: pointer;
+                    border: 1px solid rgb(189, 180, 163);
+                    opacity: 0.9;
+                }
+
+                .setcard {
+                    transform: rotateZ(-10deg);
+                    animation-name: setcard;
+                    animation-duration: 400ms;
+                }
+
+        .scorelist {
+            position: relative;
+            float: left;
+            list-style-type: none;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .score {
+            clear: both;
+        }
+
+    .popup {
+        position: fixed;
+        left: 35%;
+        top: 200px;
+        width: 30%;
+        height: 300px;
+        text-align: center;
+        border: 1px solid #789;
+        border-radius: 15px;
+        opacity: 0.9;
+        color:rgb(0, 15, 20);
+        background-color: #fff;
+    }
+
+    #footer {
+    width: 100%;
+    margin: 10px auto;
+    height: 100px;
+/*  background-color: rgb(226, 218, 192); */
+}
+    #submit {
+        position: relative;
+        width: 15%;
+        height: 100px;
+        margin: 0;
+ /*     background-color: #aaa; */
+        float: left;
+    }
+
+        #startgame {
+            position: relative;
+            width: 200px;
+            height: 40px;
+            margin: 30px 15%;
+            font-size: 20px;
+            border: 1px solid #789;
+            border-radius: 10px;
+        }
+
+        .blocked {
+            color: #aaa;
+            background-color: #eee;
+            opacity: 0.6;
+        }
+
+        .blocked:hover {
+            cursor: default;
+        }
+
+        .unblocked {
+            color: rgb(49, 40, 29);
+            background-color: rgb(248, 243, 233);
+        }
+
+        .unblocked:hover {
+            cursor: pointer;
+            color:  rgb(248, 243, 233);
+            background-color:rgb(54, 49, 42);
+        }
+    
+    #lowmid {
+        position: relative;
+        float: left;
+        display: flex;
+        width: 70%;
+        height: 100px;
+ /*     background-color:rgb(248, 243, 233); */
+    }
+
+        #found {
+            position: relative;
+            margin: auto;
+            height: 100px;
+        }
+
+            .foundpair {
+                position: relative;
+                float: left;
+                width: 96px;
+                height: 96px;
+                margin: 2px;
+                border: 1px solid #789;
+                border-radius: 10px;
+                background-size: 100%;
+            }

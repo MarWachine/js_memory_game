@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Mittelalter",
+        "content": "./img/content/content_darkages.jpg",
+        "back": "./img/darkages/back_darkages_s.png",
+        "front": [
+            "./img/darkages/armor_s.png",
+            "./img/darkages/blacksmith_s.png",
+            "./img/darkages/building_s.png",
+            "./img/darkages/castle_s.png",
+            "./img/darkages/duel_s.png",
+            "./img/darkages/helmet_s.png",
+            "./img/darkages/jester_s.png",
+            "./img/darkages/knight_s.png",
+            "./img/darkages/noble_s.png",
+            "./img/darkages/shieldbearer_s.png",
+            "./img/darkages/statue_s.png",
+            "./img/darkages/warrior_s.png"
+        ]
+    },
+    {
+        "title": "Essen",
+        "content": "./img/content/content_food.jpg",
+        "back": "./img/food/back_food_s.png",
+        "front": [
+                "./img/food/breakfast_s.png",
+                "./img/food/burger_s.png",
+                "./img/food/burrito_s.png",
+                "./img/food/fish_s.png",
+                "./img/food/fruitbowl_s.png",
+                "./img/food/pasta_s.png",
+                "./img/food/pizza_s.png",
+                "./img/food/salad_s.png",
+                "./img/food/soup_s.png",
+                "./img/food/steak_s.png",
+                "./img/food/sushi_s.png",
+                "./img/food/veggiebowl_s.png"
+        ]
+    },
+    {
+        "title": "Landschaften",
+        "content": "./img/content/content_landscapes.jpg",
+        "back": "./img/landscapes/back_landscapes_s.png",
+        "front": [
+            "./img/landscapes/afterglow_s.png",
+            "./img/landscapes/aurora_s.png",
+            "./img/landscapes/desert_s.png",
+            "./img/landscapes/dusk_s.png",
+            "./img/landscapes/foggywoods_s.png",
+            "./img/landscapes/foothills_s.png",
+            "./img/landscapes/lake_s.png",
+            "./img/landscapes/meadow_s.png",
+            "./img/landscapes/misty_s.png",
+            "./img/landscapes/mountainpond_s.png",
+            "./img/landscapes/sunlight_s.png",
+            "./img/landscapes/valley_s.png"
+        ]
+    }
+]
